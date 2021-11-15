@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Class</title>
+    <link rel="stylesheet" href="../project-1.css">
+</head>
+
+<body>
+    <header>
+        <div class="heading">
+            <div class="giphy">
+                <img src="../IIITU_logo.gif" alt="IIITU" height="130px" id="logo">
+            </div>
+            <div class="name">
+                <h1>Indian Institute of Information Technology Una</h1>
+                <h2>भारतीय सूचना प्रौद्योगिकी संस्थान ऊना</h2>
+                <h2>(An Institute of National Importance Under MoE)</h2>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../project-1.html">HOME</a></li>
+                <li><a href="../about.html">ABOUT US</a></li>
+                <li><a href="../description.html">PROJECT DESCRIPTION</a></li>
+                <li id="contact_us"></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="sem" id="table">
+        <div>
+            Subject :-
+            <div id="class_name" style="display: inline;">
+
+                Practicum III
+            </div>
+        </div>
+        <div>
+            Professor :-
+            <div id="prof_name" style="display: inline;">Mr. Divyansh Thakur
+            </div>
+        </div>
+        <div>
+            Meet link :-
+            <a id="class_link" href="https://meet.google.com/uef-itmg-vdw?authuser=1" onclick="gotoclass()">Click Here to join class</a>
+        </div>
+
+    </div>
+    <div>
+        <hr>
+        <p style="text-align: center;">If there would be any class, you will be automatically directed there!</p>
+        <hr>
+    </div>
+    <footer>
+        <ul>
+            <li id="Contact">Contact Us :</li>
+            <li><a href="https://www.linkedin.com/in/nikita-jain-b4aa75206/" target="_blank">Linked In(Nikita)</a></li>
+            <li><a href="https://www.linkedin.com/in/sayak-mondal-b70384200/" target="_blank">Linked In(Sayak)</a></li>
+        </ul>
+    </footer>
+</body>
+<script>
+    var classtable = [{
+            day: '1',
+            slot: 'A',
+            subjectname: 'Data Structure and Alogorithim',
+            subjectcode: 'CSC302',
+            faculityname: 'Dr. Bhuvaneswari',
+            classlink: 'https://meet.google.com/rat-qcry-aci?authuser=1&hs=179',
+            timestart: "9:0",
+            timeend: "9:59"
+        }, {
+            day: '1',
+            slot: 'B',
+            subjectname: 'Computer Organization',
+            subjectcode: 'CSC303',
+            faculityname: 'Ms. Aknksha',
+            classlink: 'https://meet.google.com/yeu-fqgn-qqk?authuser=1',
+            timestart: "10:0",
+            timeend: "10:59"
+        }, {
+            day: '1',
+            slot: 'C',
+            subjectname: 'Discrete Structure',
+            subjectcode: 'CSC301',
+            faculityname: 'Ms. Himani',
+            classlink: 'https://meet.google.com/kxx-qxqc-ord?authuser=1&hs=179',
+            timestart: "11:0",
+            timeend: "11:59"
+        }, {
+            day: '1',
+            slot: 'D',
+            subjectname: 'Digital Systems Design',
+            subjectcode: 'CSC304',
+            faculityname: 'Mr. Satish',
+            classlink: 'https://meet.google.com/xog-auqg-owr?authuser=1&hs=179',
+            timestart: "12:0",
+            timeend: "12:59"
+        }, {
+            day: '1',
+            slot: 'E',
+            subjectname: 'Automata and Formal Languages',
+            subjectcode: 'CSC305',
+            faculityname: 'Ms. Himani',
+            classlink: 'https://meet.google.com/ngv-cjhm-wzs?authuser=1&hs=179',
+            timestart: "14:0",
+            timeend: "14:59"
+        }, {
+            day: '1',
+            slot: 'H',
+            subjectname: 'Practicum-III',
+            subjectcode: 'CSC306',
+            faculityname: 'Dr. Vikiram',
+            classlink: 'https://meet.google.com/uef-itmg-vdw?authuser=1&hs=179',
+            timestart: "16:0",
+            timeend: "16:59"
+        }, {
+            day: '2',
+            slot: 'A',
+            subjectname: 'Data Structure and Alogorithim',
+            subjectcode: 'CSC302',
+            faculityname: 'Dr. Bhuvaneswari',
+            classlink: 'https://meet.google.com/rat-qcry-aci?authuser=1&hs=179',
+            timestart: "14:0",
+            timeend: "14:59"
+        }, {
+            day: '2',
+            slot: 'B',
+            subjectname: 'Computer Organization',
+            subjectcode: 'CSC303',
+            faculityname: 'Ms. Aknksha',
+            classlink: 'https://meet.google.com/yeu-fqgn-qqk?authuser=1',
+            timestart: "9:0",
+            timeend: "9:59"
+        }, {
+            day: '2',
+            slot: 'C',
+            subjectname: 'Discrete Structure',
+            subjectcode: 'CSC301',
+            faculityname: 'Ms. Himani',
+            classlink: 'https://meet.google.com/kxx-qxqc-ord?authuser=1&hs=179',
+            timestart: "10:0",
+            timeend: "10:59"
+        }, {
+            day: '2',
+            slot: 'D',
+            subjectname: 'Digital Systems Design',
+            subjectcode: 'CSC304',
+            faculityname: 'Mr. Satish',
+            classlink: 'https://meet.google.com/xog-auqg-owr?authuser=1&hs=179',
+            timestart: "11:0",
+            timeend: "11:59"
+        }, {
+            day: '2',
+            slot: 'E',
+            subjectname: 'Automata and Formal Languages',
+            subjectcode: 'CSC305',
+            faculityname: 'Ms. Himani',
+            classlink: 'https://meet.google.com/ngv-cjhm-wzs?authuser=1&hs=179',
+            timestart: "12:0",
+            timeend: "12:59"
+        }, {
+            day: '2',
+            slot: 'H',
+            subjectname: 'Practicum-III',
+            subjectcode: 'CSC306',
+            faculityname: 'Dr. Vikiram',
+            classlink: 'https://meet.google.com/uef-itmg-vdw?authuser=1&hs=179',
+            timestart: "16:0",
+            timeend: "16:59"
+        }, {
+            day: '3',
+            slot: 'A',
+            subjectname: 'Data Structure and Alogorithim',
+            subjectcode: 'CSC302',
+            faculityname: 'Dr. Bhuvaneswari',
+            classlink: 'https://meet.google.com/rat-qcry-aci?authuser=1&hs=179',
+            timestart: "12:0",
+            timeend: "12:59"
+        }, {
+            day: '3',
+            slot: 'B',
+            subjectname: 'Computer Organization',
+            subjectcode: 'CSC303',
+            faculityname: 'Ms. Aknksha',
+            classlink: 'https://meet.google.com/yeu-fqgn-qqk?authuser=1',
+            timestart: "14:0",
+            timeend: "14:59"
+        }, {
+            day: '3',
+            slot: 'C',
+            subjectname: 'Discrete Structure',
+            subjectcode: 'CSC301',
+            faculityname: 'Ms. Himani',
+            classlink: 'https://meet.google.com/kxx-qxqc-ord?authuser=1&hs=179',
+            timestart: "9:0",
+            timeend: "9:59"
+        }, {
+            day: '3',
+            slot: 'D',
+            subjectname: 'Digital Systems Design',
+            subjectcode: 'CSC304',
+            faculityname: 'Mr. Satish',
+            classlink: 'https://meet.google.com/xog-auqg-owr?authuser=1&hs=179',
+            timestart: "10:0",
+            timeend: "10:59"
+        }, {
+            day: '3',
+            slot: 'E',
+            subjectname: 'Automata and Formal Languages',
+            subjectcode: 'CSC305',
+            faculityname: 'Ms. Himani',
+            classlink: 'https://meet.google.com/ngv-cjhm-wzs?authuser=1&hs=179',
+            timestart: "11:0",
+            timeend: "11:59"
+        }, {
+            day: '3',
+            slot: 'H',
+            subjectname: 'Practicum-III',
+            subjectcode: 'CSC306',
+            faculityname: 'Dr. Vikiram',
+            classlink: 'https://meet.google.com/uef-itmg-vdw?authuser=1&hs=179',
+            timestart: "16:0",
+            timeend: "16:59"
+        }, {
+            day: '4',
+            slot: 'A',
+            subjectname: 'Data Structure and Alogorithim',
+            subjectcode: 'CSC302',
+            faculityname: 'Dr. Bhuvaneswari',
+            classlink: 'https://meet.google.com/rat-qcry-aci?authuser=1&hs=179',
+            timestart: "11:0",
+            timeend: "11:59"
+        }, {
+            day: '4',
+            slot: 'B',
+            subjectname: 'Computer Organization',
+            subjectcode: 'CSC303',
+            faculityname: 'Ms. Aknksha',
+            classlink: 'https://meet.google.com/yeu-fqgn-qqk?authuser=1',
+            timestart: "12:0",
+            timeend: "12:59"
+        }, {
+            day: '4',
+            slot: 'C',
+            subjectname: 'Discrete Structure',
+            subjectcode: 'CSC301',
+            faculityname: 'Ms. Himani',
+            classlink: 'https://meet.google.com/kxx-qxqc-ord?authuser=1&hs=179',
+            timestart: "14:0",
+            timeend: "14:59"
+        }, {
+            day: '4',
+            slot: 'D',
+            subjectname: 'Digital Systems Design',
+            subjectcode: 'CSC304',
+            faculityname: 'Mr. Satish',
+            classlink: 'https://meet.google.com/xog-auqg-owr?authuser=1&hs=179',
+            timestart: "9:0",
+            timeend: "9:59"
+        }, {
+            day: '4',
+            slot: 'E',
+            subjectname: 'Automata and Formal Languages',
+            subjectcode: 'CSC305',
+            faculityname: 'Ms. Himani',
+            classlink: 'https://meet.google.com/ngv-cjhm-wzs?authuser=1&hs=179',
+            timestart: "10:0",
+            timeend: "10:59"
+        }, {
+            day: '4',
+            slot: 'H',
+            subjectname: 'Practicum-III',
+            subjectcode: 'CSC306',
+            faculityname: 'Dr. Vikiram',
+            classlink: 'https://meet.google.com/uef-itmg-vdw?authuser=1&hs=179',
+            timestart: "16:0",
+            timeend: "16:59"
+        }
+
+    ];
+    var classtime = 0;
+
+    let today = new Date();
+    let options = {
+        weekday: "long",
+        day: "numeric",
+        month: "long"
+    };
+    let hour = today.getHours();
+    let minute = today.getMinutes();
+    let day = today.toLocaleDateString("en-US", options);
+    let currenttime = hour + ":" + minute;
+    let weekday = today.getDay();
+    console.log(weekday);
+    console.log(currenttime);
+
+    var gotoclass = time();
+    console.log(gotoclass);
+    console.log(classtable[gotoclass]);
+
+    function time() {
+        for (let i = 0; i < classtable.length; i++) {
+            if (currenttime >= classtable[i].timestart && currenttime <= classtable[i].timeend && weekday == classtable[i].day) {
+                classtime = i;
+                console.log(classtime);
+                return classtime;
+            } else {
+                classtime = -1;
+            }
+        }
+        return classtime;
+    };
+
+
+    if (gotoclass == -1) {
+        let output0 = document.getElementById('table');
+        output0.innerHTML = "No class!<br>Make the best use of your time!";
+        output0.style.fontSize = "150%";
+
+    } else {
+        console.log(currenttime);
+        const subject = document.getElementById('class_name');
+        subject.innerHTML = classtable[gotoclass].subjectname;
+        const prof = document.getElementById('prof_name');
+        prof.innerHTML = classtable[gotoclass].faculityname;
+        document.querySelector("#class_link").setAttribute("href",classtable[gotoclass].classlink);
+    }
+    let count = 0;
+
+    function gotoclass() {
+        window.location.replace(classtable[gotoclass].classlink);
+        count = 1;
+    }
+    if (count == 0) {
+
+        setTimeout(() => {
+            window.location.replace(classtable[gotoclass].classlink);
+        }, 5000);
+    }
+</script>
+
+</html>
