@@ -1,0 +1,197 @@
+body {
+  background-color: rgb(245, 239, 239);
+  margin: 0px;
+}
+
+.heading {
+  display: flex;
+  height: 175px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-right: 175px;
+}
+
+.giphy {
+  width: 400px;
+  margin-left: 50px;
+}
+
+.name {
+  width: 3400px;
+  text-align: center;
+}
+
+nav,
+footer {
+  background-color: black;
+  color: rgb(245, 239, 239);
+  text-align: center;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  padding: 12px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(245, 239, 239);
+}
+
+nav ul li:hover {
+  background-color: rgba(238, 85, 30, 0.8);
+}
+
+#contact_us:after {
+  content: "CONTACT US";
+}
+
+#contact_us:hover:after {
+  content: "SEE FOOTER!";
+}
+
+.description {
+  text-align: center;
+  width: 70vw;
+  height: fit-content;
+  min-height: 40vh;
+  background-color: rgb(209, 207, 207);
+  margin: auto;
+  border: 2px solid rgb(134, 133, 133);
+  padding: 10px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  line-height: 2rem;
+}
+
+.about_body{
+  width: fit-content;
+  height: fit-content;
+  min-height: 40vh;
+  background-color: rgb(209, 207, 207);
+  margin: auto;
+  border: 2px solid rgb(134, 133, 133);
+  margin-bottom: 50px;
+  margin-top: 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  flex-flow: row;
+}
+
+.sem {
+  width: 85vw;
+  height: fit-content;
+  min-height: 40vh;
+  background-color: rgb(209, 207, 207);
+  margin: auto;
+  border: 2px solid rgb(134, 133, 133);
+  margin-bottom: 50px;
+  margin-top: 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.sem div {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.sem details {
+  display: flex;
+  flex-flow: column;
+  font-size: 20px;
+}
+
+.sem summary {
+  font-size: 25px;
+  /* text-shadow: 2px 2px 3px rgb(87, 86, 86); */
+}
+
+details a {
+  text-decoration: none;
+  color: black;
+  transition-property: all;
+  transition-duration: 0.2s;
+}
+
+details a:hover {
+  color: white;
+  font-size: 25px;
+  font-weight: bolder;
+  text-shadow: 1px 1px 3px black;
+}
+
+/* footer part */
+
+footer ul li a {
+  text-decoration: none;
+  color: rgb(245, 239, 239);
+}
+footer ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+  bottom: 0px;
+  cursor: pointer;
+  padding: 12px;
+}
+
+footer ul:hover {
+  border: none;
+}
+
+footer ul li:hover {
+  background-color: rgb(238, 85, 30, 0.8);
+}
+
+footer ul li:first-child:hover {
+  background-color: black;
+}
+
+/* responsiveness */
+
+@media only screen and (max-width: 500px) {
+  #Sayak {
+    display: none;
+  }
+  #Nikita {
+
+    display: none;
+  }
+  #logo {
+    margin-left: 80px;
+    height: 100px;
+  }
+  #prof_name {
+    font-size: 14px;
+  }
+  #class_name {
+    font-size: 14px;
+  }
+  #class_link {
+    font-size: 14px;
+  }
+  .name h2 {
+    display: none;
+  }
+}
