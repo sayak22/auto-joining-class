@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Class</title>
+        <link
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/Iiit-una-logo.png/220px-Iiit-una-logo.png"
+    />
+    <link rel="stylesheet" href="../project-1.css">
+</head>
+
+<body>
+    <header>
+        <div class="heading">
+            <div class="giphy">
+                <img src="../IIITU_logo.gif" alt="IIITU" height="130px" id="logo">
+            </div>
+            <div class="name">
+                <h1>Indian Institute of Information Technology Una</h1>
+                <h2>भारतीय सूचना प्रौद्योगिकी संस्थान ऊना</h2>
+                <h2>(An Institute of National Importance Under MoE)</h2>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li style="background-color: rgb(238, 85, 30, 0.8)"><a href="../index.html">HOME</a></li>
+                <li><a href="../about.html">ABOUT US</a></li>
+                <li><a href="../description.html">PROJECT DESCRIPTION</a></li>
+                <li id="contact_us"></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="sem" id="table">
+        <div>
+            Subject :-
+            <div id="class_name" style="display: inline;">
+
+                Practicum III
+            </div>
+        </div>
+        <div>
+            Professor :-
+            <div id="prof_name" style="display: inline;">Mr. Divyansh Thakur
+            </div>
+        </div>
+        <div>
+            Meet link :-
+            <a id="class_link" href="https://meet.google.com/uef-itmg-vdw?authuser=1" onclick="gotoclass()">Click here to join class</a>
+        </div>
+
+    </div>
+    <div>
+        <hr>
+        <p style="text-align: center;">If there would be any class, you will be automatically directed there!</p>
+        <hr>
+    </div>
+    <footer>
+        <ul>
+            <li id="Contact">Contact Us :</li>
+            <li><a href="https://www.linkedin.com/in/nikita-jain-b4aa75206/" target="_blank">Linked In(Nikita)</a></li>
+            <li><a href="https://www.linkedin.com/in/sayak-mondal-b70384200/" target="_blank">Linked In(Sayak)</a></li>
+        </ul>
+    </footer>
+</body>
+<script>
+    var classtable = [{
+            day: '1',
+            slot: 'A',
+            subjectname: 'Digital Circuits and Systems',
+            subjectcode: 'ECC302',
+            faculityname: 'Prof. Pranshu',
+            classlink: 'https://www.google.com', //because we dont have link of other classes!
+            timestart: "9:0",
+            timeend: "9:59"
+        }, {
+            day: '1',
+            slot: 'B',
+            subjectname: 'Electronic Devices and Circuits',
+            subjectcode: 'ECC301',
+            faculityname: 'Prof. Satish',
+            classlink: 'https://www.google.com',
+            timestart: "10:0",
+            timeend: "10:59"
+        }, {
+            day: '1',
+            slot: 'C',
+            subjectname: 'Communication Systems',
+            subjectcode: 'ECC304',
+            faculityname: 'Dr. Ashwini',
+            classlink: 'https://www.google.com/',
+            timestart: "11:0",
+            timeend: "11:59"
+        }, {
+            day: '1',
+            slot: 'D',
+            subjectname: 'Electromagnetic Field Theory',
+            subjectcode: 'ECC303',
+            faculityname: 'Dr. Sumit',
+            classlink: 'https://www.google.com',
+            timestart: "12:0",
+            timeend: "12:59"
+        }, {
+            day: '1',
+            slot: 'H',
+            subjectname: 'Practicum-III',
+            subjectcode: 'ECC305',
+            faculityname: 'All/Dr. Vikiram',
+            classlink: 'https://www.google.com',
+            timestart: "16:0",
+            timeend: "16:59"
+        }, {
+            day: '2',
+            slot: 'B',
+            subjectname: 'Electronic Devices and Circuits',
+            subjectcode: 'ECC301',
+            faculityname: 'Prof. Satish',
+            classlink: 'https://www.google.com',
+            timestart: "9:0",
+            timeend: "9:59"
+        }, {
+            day: '2',
+            slot: 'C',
+            subjectname: 'Communication Systems',
+            subjectcode: 'ECC304',
+            faculityname: 'Dr. Ashwini',
+            classlink: 'https://www.google.com/',
+            timestart: "10:0",
+            timeend: "10:59"
+        }, {
+            day: '2',
+            slot: 'D',
+            subjectname: 'Electromagnetic Field Theory',
+            subjectcode: 'ECC303',
+            faculityname: 'Dr. Sumit',
+            classlink: 'https://www.google.com',
+            timestart: "11:0",
+            timeend: "11:59"
+        }, {
+            day: '2',
+            slot: 'A',
+            subjectname: 'Digital Circuits and Systems',
+            subjectcode: 'ECC302',
+            faculityname: 'Prof. Pranshu',
+            classlink: 'https://www.google.com',
+            timestart: "14:0",
+            timeend: "14:59"
+        }, {
+            day: '2',
+            slot: 'H',
+            subjectname: 'Practicum-III',
+            subjectcode: 'ECC305',
+            faculityname: 'All/Dr. Vikiram',
+            classlink: 'https://www.google.com',
+            timestart: "16:0",
+            timeend: "16:59"
+        }, {
+            day: '3',
+            slot: 'C',
+            subjectname: 'Communication Systems',
+            subjectcode: 'ECC304',
+            faculityname: 'Dr. Ashwini',
+            classlink: 'https://www.google.com/',
+            timestart: "9:0",
+            timeend: "9:59"
+        }, {
+            day: '3',
+            slot: 'D',
+            subjectname: 'Electromagnetic Field Theory',
+            subjectcode: 'ECC303',
+            faculityname: 'Dr. Sumit',
+            classlink: 'https://www.google.com',
+            timestart: "10:0",
+            timeend: "10:59"
+        }, {
+            day: '3',
+            slot: 'A',
+            subjectname: 'Digital Circuits and Systems',
+            subjectcode: 'ECC302',
+            faculityname: 'Prof. Pranshu',
+            classlink: 'https://www.google.com',
+            timestart: "12:0",
+            timeend: "12:59"
+        }, {
+            day: '3',
+            slot: 'B',
+            subjectname: 'Electronic Devices and Circuits',
+            subjectcode: 'ECC301',
+            faculityname: 'Prof. Satish',
+            classlink: 'https://www.google.com',
+            timestart: "14:0",
+            timeend: "14:59"
+        }, {
+            day: '3',
+            slot: 'H',
+            subjectname: 'Practicum-III',
+            subjectcode: 'ECC305',
+            faculityname: 'All/Dr. Vikiram',
+            classlink: 'https://www.google.com',
+            timestart: "16:0",
+            timeend: "16:59"
+        }, {
+            day: '4',
+            slot: 'D',
+            subjectname: 'Electromagnetic Field Theory',
+            subjectcode: 'ECC303',
+            faculityname: 'Dr. Sumit',
+            classlink: 'https://www.google.com',
+            timestart: "9:0",
+            timeend: "9:59"
+        }, {
+            day: '4',
+            slot: 'A',
+            subjectname: 'Digital Circuits and Systems',
+            subjectcode: 'ECC302',
+            faculityname: 'Prof. Pranshu',
+            classlink: 'https://www.google.com',
+            timestart: "11:0",
+            timeend: "11:59"
+        }, {
+            day: '4',
+            slot: 'B',
+            subjectname: 'Electronic Devices and Circuits',
+            subjectcode: 'ECC301',
+            faculityname: 'Prof. Satish',
+            classlink: 'https://www.google.com',
+            timestart: "12:0",
+            timeend: "12:59"
+        }, {
+            day: '4',
+            slot: 'C',
+            subjectname: 'Communication Systems',
+            subjectcode: 'ECC304',
+            faculityname: 'Dr. Ashwini',
+            classlink: 'https://www.google.com/',
+            timestart: "14:0",
+            timeend: "14:59"
+        }, {
+            day: '4',
+            slot: 'H',
+            subjectname: 'Practicum-III',
+            subjectcode: 'ECC305',
+            faculityname: 'All/Dr. Vikiram',
+            classlink: 'https://www.google.com',
+            timestart: "16:0",
+            timeend: "16:59"
+        }
+
+    ];
+    var classtime = 0;
+
+    let today = new Date();
+    let options = {
+        weekday: "long",
+        day: "numeric",
+        month: "long"
+    };
+    let hour = today.getHours();
+    let minute = today.getMinutes();
+    let day = today.toLocaleDateString("en-US", options);
+    let currenttime = hour + ":" + minute;
+    let weekday = today.getDay();
+    console.log(weekday);
+    console.log(currenttime);
+
+    var gotoclass = time();
+    console.log(gotoclass);
+    console.log(classtable[gotoclass]);
+
+    function time() {
+        for (let i = 0; i < classtable.length; i++) {
+            if (currenttime >= classtable[i].timestart && currenttime <= classtable[i].timeend && weekday == classtable[i].day) {
+                classtime = i;
+                console.log(classtime);
+                return classtime;
+            } else {
+                classtime = -1;
+            }
+        }
+        return classtime;
+    };
+
+
+    if (gotoclass == -1) {
+        let output0 = document.getElementById('table');
+        output0.innerHTML = "No class!<br>Make the best use of your time!";
+        output0.style.fontSize = "150%";
+
+    } else {
+        console.log(currenttime);
+        const subject = document.getElementById('class_name');
+        subject.innerHTML = classtable[gotoclass].subjectname;
+        const prof = document.getElementById('prof_name');
+        prof.innerHTML = classtable[gotoclass].faculityname;
+        document.querySelector("#class_link").setAttribute("href",classtable[gotoclass].classlink);
+    }
+    let count = 0;
+
+    function gotoclass() {
+        window.location.replace(classtable[gotoclass].classlink);
+        count = 1;
+    }
+    if (count == 0) {
+
+        setTimeout(() => {
+            window.location.replace(classtable[gotoclass].classlink);
+        }, 5000);
+    }
+</script>
+
+</html>
